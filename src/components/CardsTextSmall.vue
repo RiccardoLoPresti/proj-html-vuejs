@@ -6,7 +6,7 @@ export default {
             items:[
                 {
                     cat:'recipes',
-                    text:'how to take better concert pictures in 30 seconds',
+                    text:'tips to help you quickly prepare your lunch',
                     img:'../src/assets/images/blog-66.jpg',
                     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
                 },
