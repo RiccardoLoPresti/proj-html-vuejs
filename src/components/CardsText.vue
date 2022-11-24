@@ -48,7 +48,7 @@ export default {
 
 <template>
     <div v-for="item in items" :key="item" class="custom-card ">
-        <div class="box debug">
+        <div class="box">
 
             <img :src="item.img" alt="">
 
@@ -116,4 +116,5 @@ export default {
         display: block;
     }
 }
+
 </style>

@@ -1,13 +1,172 @@
 <script>
 export default {
-    name:'AppInfo'
+    name:'AppInfo',
+    data(){
+        return{
+            populars:[
+                {
+                    img:'../src/assets/images/blog-55.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-56.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-57.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-58.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-59.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+            ],
+            recents:[
+                {
+                    img:'../src/assets/images/blog-65.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-66.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-67.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-68.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+                {
+                    img:'../src/assets/images/blog-69.jpg',
+                    text:'how to take better concert pictures in 30 seconds',
+                    data:'january, 12, 2022'
+                },
+            ]
+        }
+    }
 }
 </script>
 
 <template>
-  
+  <section>
+    <div class="container h-100">
+
+        <div class="row h-100">
+
+            <div class="col-xxl-4 col-lg-6">
+
+                <div class="post-wrapper ">
+
+                    <h3 class="m-0">Popular posts</h3>
+
+                    <div v-for="popular in populars" :key="popular" class="posts d-flex">
+                        <div class="box-img d-flex align-items-center">
+                            <img :src="popular.img" alt="">
+                        </div>
+                        <div class="text">
+                            <h6 class="m-0">{{popular.text}}</h6>
+                            <span>{{popular.data}}</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xxl-4 col-lg-6">
+
+                <div class="post-wrapper ">
+
+                    <h3 class="m-0">Recent posts</h3>
+
+                    <div v-for="recent in recents" :key="recent" class="posts d-flex">
+                        <div class="box-img d-flex align-items-center">
+                            <img :src="recent.img" alt="">
+                        </div>
+                        <div class="text">
+                            <h6 class="m-0">{{recent.text}}</h6>
+                            <span>{{recent.data}}</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="col-xxl-4 col-lg-6">
+
+                <h3 class="m-0">featured posts</h3>
+
+                <div class="posts">
+                        <div class="box-img">
+                            <img src="" alt="">
+                        </div>
+                        <h6>dsakodokksad</h6>
+                        <span>datae</span>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/vars' as *;
+
+.container{
+    margin-top:50px;
+    margin-bottom:60px;
+    h3{
+        color: $text-4444-dark-grey-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: .9rem;
+    }
+    .post-wrapper{
+        .posts{
+            padding:10px 0;
+            border-bottom: 1px dotted $text-dark-grey-color;
+            &:last-child{
+                border-bottom: none;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+            .text{
+                padding: 10px 10px;
+                h6, span{
+                    text-transform: capitalize;
+                }
+                h6{
+                    font-size: .85rem;
+
+                }
+                span{
+                    font-size: .7rem;
+                    color:$text-dark-grey-color ;
+                }
+            }
+        }
+    }
+}
+
 
 </style>

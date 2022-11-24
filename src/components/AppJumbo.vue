@@ -16,7 +16,7 @@ export default {
     <div class="jumbo">
         <div class="container">
             <div class="row">
-                <div class="col-auto w-100 x d-flex justify-content-center flex-wrap">
+                <div class="col-auto wrapper w-100 d-flex justify-content-center flex-wrap">
                     <CardText/>
                 </div>
             </div>
@@ -33,8 +33,7 @@ export default {
     padding: 50px 0;
     background: $bg-very-ligth-grey-color;
 }
-.x{
+.wrapper{
     gap: 30px;
 }
-
 </style>
