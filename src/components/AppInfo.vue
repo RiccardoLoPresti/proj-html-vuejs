@@ -1,6 +1,12 @@
 <script>
+
+import CardsTextSmall from './CardsTextSmall.vue';
+
 export default {
     name:'AppInfo',
+    components:{
+        CardsTextSmall
+    },
     data(){
         return{
             populars:[
@@ -63,6 +69,7 @@ export default {
 </script>
 
 <template>
+
   <section>
     <div class="container h-100">
 
@@ -112,18 +119,39 @@ export default {
 
                 <h3 class="m-0">featured posts</h3>
 
-                <div class="posts">
-                        <div class="box-img">
-                            <img src="" alt="">
+                <div class="box-card">
+
+                    <CardsTextSmall/>
+
+                </div>
+
+                <div class="post-wrapper">
+
+                    <h3 class="mb-1">featured Author</h3>
+
+                    <div class="posts d-flex">
+
+                        <div class="box-img d-flex align-items-center">
+                            <img id="avatar" src="../assets/images/avatar.jpg" alt="avatar.jpg">
                         </div>
-                        <h6>dsakodokksad</h6>
-                        <span>datae</span>
+
+                        <div class="text">
+                            <h6 id="author">jhon doe</h6>
+                            <span>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum ad provident neque beatae quia animi possimus, minima illo!
+                            </span>
+                        </div>
+
                     </div>
+
+                </div>
+
             </div>
         </div>
 
     </div>
   </section>
+
 </template>
 
 <style lang="scss" scoped>
@@ -133,7 +161,7 @@ export default {
     margin-top:50px;
     margin-bottom:60px;
     h3{
-        color: $text-4444-dark-grey-color;
+        color: $text-3333-dark-grey-color;
         text-transform: uppercase;
         font-weight: 700;
         font-size: .9rem;
@@ -151,22 +179,35 @@ export default {
                 margin-right: 10px;
             }
             .text{
+                max-width: 335px;
                 padding: 10px 10px;
                 h6, span{
                     text-transform: capitalize;
                 }
                 h6{
                     font-size: .85rem;
-
                 }
                 span{
                     font-size: .7rem;
                     color:$text-dark-grey-color ;
                 }
             }
+            #avatar{
+                min-width: 110px;
+                height: 110px;
+            }
+            #author{
+                text-transform: capitalize;
+                font-size: 1rem;
+                padding-bottom: 5px;
+                font-weight: 700;
+            }
         }
     }
+    .box-card{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
 }
-
 
 </style>
