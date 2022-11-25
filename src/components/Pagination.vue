@@ -20,9 +20,9 @@ export default {
 @use '../styles/partials/vars' as *;
 .pagination{
         padding-bottom: 70px;
-        cursor: pointer;
     }
     .navigation{
+        cursor: pointer;
         border: 1px solid $border-000f-color;
         border-radius: 5px;
         color: $text-main-color;
