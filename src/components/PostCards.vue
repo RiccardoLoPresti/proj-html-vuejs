@@ -188,7 +188,10 @@ export default {
 .custom-card{
     width: 100%;
     .box{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+    }
+    .box:last-child{
+        margin-bottom: 20px;
     }
     img{
         height: 436px;
@@ -245,7 +248,7 @@ export default {
                 padding-bottom:30px ;
                 color: $text-dark-grey-color;
                 font-size: .8rem;
-                border-bottom: 1px dotted $text-dark-grey-color;
+                border-bottom: 1px solid $border-eeee-color;
                 .author, .category, .comments{
                     padding-right: 10px;
                     span, a{

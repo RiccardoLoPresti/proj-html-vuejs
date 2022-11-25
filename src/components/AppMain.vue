@@ -1,11 +1,13 @@
 <script>
 
 import PostCards from './PostCards.vue';
+import Pagination from './Pagination.vue';
 
 export default {
     name:'AppMain',
     components:{
-        PostCards
+        PostCards,
+        Pagination
     },
     data(){
         return{
@@ -43,7 +45,10 @@ export default {
             <div class="row h-100">
 
                 <div class="col-xxl-9">
+
                     <PostCards/>
+                    <Pagination/>
+                    
                 </div>
 
                 <div class="col-xxl-3">
@@ -81,7 +86,7 @@ export default {
                     <div class="instagram">
                         <h3>latest from instagram</h3>
 
-
+                        <!--CONTENUTO QUI-->
                     </div>
 
                     <div class="tags">
@@ -113,6 +118,7 @@ export default {
     h3{
         padding-bottom: 10px;
     }
+    
     .latest{
         padding-bottom: 10px;
         i{
