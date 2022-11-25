@@ -16,6 +16,8 @@
         border-radius: 0%;
     }@else if $type=='small-rounded'{
         border-radius: 25px;
+        padding: 1px 10px;
+        line-height: 20px;
     }
 }
 

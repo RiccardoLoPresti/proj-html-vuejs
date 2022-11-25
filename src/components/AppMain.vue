@@ -6,6 +6,32 @@ export default {
     name:'AppMain',
     components:{
         PostCards
+    },
+    data(){
+        return{
+            tags:[
+                {
+                    cat:'design',
+                    ulr:'#'
+                },
+                {
+                    cat:'brands',
+                    ulr:'#'
+                },
+                {
+                    cat:'video',
+                    ulr:'#'
+                },
+                {
+                    cat:'business',
+                    ulr:'#'
+                },
+                {
+                    cat:'travel',
+                    ulr:'#'
+                },
+            ]
+        }
     }
 }
 </script>
@@ -20,7 +46,7 @@ export default {
                     <PostCards/>
                 </div>
 
-                <div class="col-xxl-3 debug">
+                <div class="col-xxl-3">
 
                     <div class="twitter">
                         <h3>latest from twitter</h3>
@@ -57,6 +83,19 @@ export default {
 
 
                     </div>
+
+                    <div class="tags">
+                        <h3>tags</h3>
+                        <div v-for="tag in tags" :key="tag" class="pills">
+                            <a :href="tag.ulr">{{tag.cat}}</a>
+                        </div>
+                    </div>
+
+                    <div class="facebook">
+                        <h3>find us on facebook</h3>
+                        <a href="#">Okler Themes</a>
+                    </div>
+
                 </div>
 
             </div>
@@ -67,6 +106,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/vars' as *;
+@use '../styles/partials/mixin' as *;
 
 .row{
     padding-top: 60px;
@@ -94,6 +134,24 @@ export default {
     }
     .instagram{
         padding-top: 30px;
+    }
+    .tags{
+        padding-bottom: 100px;
+    }
+    .pills{
+        margin-right:5px;
+        @include badge('small-rounded');
+        a{
+            color: $white-color;
+        }
+    }
+    .facebook{
+        a{
+            border-left: 4px solid $border-eeee-color;
+            color:$text-main-color;
+            padding: 10px 15px;
+            font-size: .9rem;
+        }
     }
 }
 

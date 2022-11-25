@@ -1,8 +1,12 @@
 <script>
+
+import Collage from './Collage.vue';
+
+
 export default {
     name:'CardsText',
-    props:{
-        object: Object
+    components:{
+        Collage
     },
     data(){
         return{
