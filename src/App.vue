@@ -4,6 +4,7 @@ import AppHeader from '../src/components/AppHeader.vue'
 import AppJumbo from '../src/components/AppJumbo.vue'
 import AppInfo from '../src/components/AppInfo.vue'
 import AppSliderBadge from '../src/components/AppSliderBadge.vue'
+import AppMain from '../src/components/AppMain.vue'
 
 export default {
   name:'App',
@@ -11,7 +12,8 @@ export default {
     AppHeader,
     AppJumbo,
     AppInfo,
-    AppSliderBadge
+    AppSliderBadge,
+    AppMain
   }
 }
 </script>
@@ -21,6 +23,7 @@ export default {
   <AppJumbo/>
   <AppInfo/>
   <AppSliderBadge/>
+  <AppMain/>
 </template>
 
 <style lang="scss">

@@ -85,11 +85,13 @@ export default {
       min-width: 185px;
       display: flex;
       justify-content: center;
+      cursor: pointer;
     }
     .prev,
     .next{
       position: absolute;
       transform: translateY(-50%);
+      cursor: pointer;
     }
     .prev{
       top: 50%;
