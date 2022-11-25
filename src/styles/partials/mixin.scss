@@ -12,7 +12,8 @@
         background: $bg-main-color;
     }@else if $type=='big'{
         font-size: .85rem;
-        padding: 10px 15px;
+        padding: 20px 60px;
+        border-radius: 0%;
     }@else if $type=='small-rounded'{
         border-radius: 25px;
     }
