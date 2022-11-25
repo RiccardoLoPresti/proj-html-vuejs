@@ -1,11 +1,11 @@
 <script>
 
-import CardsTextSmall from './CardsTextSmall.vue';
+import CardsText from './CardsText.vue';
 
 export default {
     name:'AppInfo',
     components:{
-        CardsTextSmall
+        CardsText
     },
     data(){
         return{
@@ -121,7 +121,7 @@ export default {
 
                 <div class="box-card">
 
-                    <CardsTextSmall/>
+                    <CardsText type="info"/>
 
                 </div>
 
@@ -165,11 +165,12 @@ export default {
         text-transform: uppercase;
         font-weight: 700;
         font-size: .9rem;
+        padding-bottom: 5px;
     }
     .post-wrapper{
         .posts{
-            padding:10px 0;
             border-bottom: 1px dotted $text-dark-grey-color;
+            margin: 2px 0;
             &:last-child{
                 border-bottom: none;
             }
@@ -177,6 +178,7 @@ export default {
                 width: 50px;
                 height: 50px;
                 margin-right: 10px;
+                object-fit: cover;
             }
             .text{
                 max-width: 335px;
@@ -205,8 +207,9 @@ export default {
         }
     }
     .box-card{
-        margin-top: 40px;
-        margin-bottom: 30px;
+        margin-top: 35px;
+        margin-bottom: 32px;
+        height: 185px;
     }
 }
 

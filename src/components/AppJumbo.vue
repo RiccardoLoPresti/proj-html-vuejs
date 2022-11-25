@@ -17,7 +17,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-auto wrapper w-100 d-flex justify-content-center flex-wrap">
-                    <CardText/>
+                    <CardText type="jumbo"/>
                 </div>
             </div>
         </div>

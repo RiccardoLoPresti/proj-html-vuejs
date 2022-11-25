@@ -1,58 +1,28 @@
 <script>
+
+import {store} from '../data/store.js'
+
 export default {
     name:'CardsText',
+    props:{
+        type: String
+    },
     data(){
         return{
-            items:[
-                {
-                    cat:'photography',
-                    text:'how to take better concert pictures in 30 seconds',
-                    img:'../src/assets/images/blog-46.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
-                },
-                {
-                    cat:'gadgets',
-                    text:'gadfets that make your smartphone even smarter',
-                    img:'../src/assets/images/blog-47.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
-                },
-                {
-                    cat:'travel',
-                    text:'20 top-rated tourist attractions ins manhattan',
-                    img:'../src/assets/images/blog-48.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
-                },
-                {
-                    cat:'lifestyle',
-                    text:'the best way to ride a motorcycle',
-                    img:'../src/assets/images/blog-49.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
-                },
-                {
-                    cat:'travel',
-                    text:'5 fun things to do at beach',
-                    img:'../src/assets/images/blog-50.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
-                },
-                {
-                    cat:'recipes',
-                    text:'amazingly fresh fruit and herb drinks for summer',
-                    img:'../src/assets/images/blog-51.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
-                }
-            ]
+            store
         }
     }
 }
 </script>
 
 <template>
-    <div v-for="item in items" :key="item" class="custom-card ">
+    <div v-for="item in store[type]" :key="item" class="custom-card ">
         <div class="box">
-
+            
             <img :src="item.img" alt="">
 
             <div class="text">
+            
                 <span>{{item.cat}}</span>
                 <h3>{{item.text}}</h3>
                 <div class="overlay">
@@ -68,19 +38,16 @@ export default {
 @use '../styles/partials/vars' as *;
 @use '../styles/partials/mixin' as *;
 .custom-card{
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     height: 250px;
-    min-height: 250px;
-    position: relative;
     color: $white-color;
-    .box{
-        min-height: 250px;
-
-    }
     img{
         filter:brightness(.6);
-        height: 250px;
         object-fit: cover;
+    }
+    .box{
+        position: relative;
     }
     .text{
         position: absolute;
@@ -103,7 +70,7 @@ export default {
             font-size: .8rem;
             color: $text-grey-color;
             font-weight: 600;
-            height: 80px;
+            height: 60px;
             overflow: auto;
         }
     }

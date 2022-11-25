@@ -1,6 +1,9 @@
 <script>
 export default {
     name:'CardsText',
+    props:{
+        object: Object
+    },
     data(){
         return{
             items:[
@@ -69,6 +72,27 @@ export default {
                 },
                 {
                     text:'top camper trailer towing tips',
+                    img:'../src/assets/images/blog-58-big.jpg',
+                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+                    author: {
+                        name:'john doe',
+                        href:'#'
+                    },
+                    cat:{
+                        badge:'travel, lifestyle',
+                        href:'#'
+                    },
+                    comments:{
+                        number:'12 comments',
+                        href:'#'
+                    },
+                    date:{
+                        day:12,
+                        month: 'jan'
+                    }
+                },
+                {
+                    text:'10 best travel tips after 5 years traveling the word',
                     img:'../src/assets/images/blog-58-big.jpg',
                     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
                     author: {
