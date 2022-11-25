@@ -161,10 +161,6 @@ export default {
     margin-top:50px;
     margin-bottom:60px;
     h3{
-        color: $text-3333-dark-grey-color;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: .9rem;
         padding-bottom: 5px;
     }
     .post-wrapper{

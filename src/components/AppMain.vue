@@ -20,8 +20,43 @@ export default {
                     <PostCards/>
                 </div>
 
-                <div class="col-xxl-3">
-                    <div class="colonna2"></div>
+                <div class="col-xxl-3 debug">
+
+                    <div class="twitter">
+                        <h3>latest from twitter</h3>
+
+                        <div class="latest d-flex">
+
+                            <i class="fa-brands fa-twitter"></i>
+
+                            <div class="text">
+                                <p class="m-0">Lorem ipsum dolor sit amet dsadasdas consectetur.</p>
+                                <div class="data">
+                                    <p>data</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="latest d-flex">
+
+                            <i class="fa-brands fa-twitter"></i>
+
+                            <div class="text">
+                                <p class="m-0">Lorem ipsum dolor sit amet dsadasdas consectetur.</p>
+                                <div class="data">
+                                    <p>data</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="instagram">
+                        <h3>latest from instagram</h3>
+
+
+                    </div>
                 </div>
 
             </div>
@@ -31,11 +66,35 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/vars' as *;
+
 .row{
     padding-top: 60px;
+    h3{
+        padding-bottom: 10px;
+    }
+    .latest{
+        padding-bottom: 10px;
+        i{
+            font-size: 1.3rem;
+            padding-right: 10px;
+        }
+        span{
+            display: block;
+        }
+        .text{
+            p{
+                font-size: .9rem;
+            }
+            .data{
+                padding-top: 3px;
+                color: $text-main-color;
+            }
+        }
+    }
+    .instagram{
+        padding-top: 30px;
+    }
 }
-.colonna2{
-    height: 500px;
-    background: rgb(45, 175, 173);
-}
+
 </style>

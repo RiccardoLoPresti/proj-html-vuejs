@@ -64,6 +64,7 @@ export default {
             font-weight: 800;
             text-transform: capitalize;
             margin-top: 10px;
+            color: $white-color;
         }
         .overlay{
             display: none;

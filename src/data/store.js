@@ -10,7 +10,7 @@ export const store = reactive({
         },
         {
             cat:'gadgets',
-            text:'gadfets that make your smartphone even smarter',
+            text:'gadgets that make your smartphone even smarter',
             img:'../src/assets/images/blog-47.jpg',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
         },
