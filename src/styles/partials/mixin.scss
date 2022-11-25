@@ -1,6 +1,6 @@
 @use './vars' as *;
 
-@mixin badge($type:'main',) {
+@mixin badge($type:'main') {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 800;

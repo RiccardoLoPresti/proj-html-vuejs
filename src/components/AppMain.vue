@@ -96,7 +96,7 @@ export default {
                         </div>
                     </div>
 
-                    <div class="facebook">
+                    <div class="facebook pb-5">
                         <h3>find us on facebook</h3>
                         <a href="#">Okler Themes</a>
                     </div>
