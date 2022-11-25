@@ -1,2 +1,20 @@
+@use './vars' as *;
 
+@mixin badge($type:'main',) {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: .65rem;
+    padding: 5px 10px;
+    background: $bg-very-dark-grey-color;
+    
+    @if $type=='main'{
+        background: $bg-main-color;
+    }@else if $type=='big'{
+        font-size: .85rem;
+        padding: 10px 15px;
+    }@else if $type=='small-rounded'{
+        border-radius: 25px;
+    }
+}
 

@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/vars' as *;
+@use '../styles/partials/mixin' as *;
 
 .custom-card{
     max-width: 450px;
@@ -59,15 +60,10 @@ export default {
         padding-right: 25px;
         padding-left: 25px;
         span{
-            display: inline-block;
-            background: $bg-main-color;
-            text-transform: uppercase;
-            font-weight: 800;
-            font-size: .65rem;
-            margin-bottom: 10px;
-            padding: 5px 10px;
+            @include badge('main');
         }
         h3{
+            margin-top: 10px;
             font-size: 1.2rem;
             font-weight: 800;
             text-transform: capitalize;
