@@ -1,6 +1,7 @@
 <script>
 
 import Collage from './Collage.vue';
+import {store} from '../data/store.js'
 
 
 export default {
@@ -10,113 +11,7 @@ export default {
     },
     data(){
         return{
-            items:[
-                {
-                    text:'how to make friends as a grown-up',
-                    img:'../src/assets/images/blog-54.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
-                    author: {
-                        name:'john doe',
-                        href:'#'
-                    },
-                    cat:{
-                        badge:'lifestyle, travel',
-                        href:'#'
-                    },
-                    comments:{
-                        number:'12 comments',
-                        href:'#'
-                    },
-                    date:{
-                        day:12,
-                        month: 'jan'
-                    }
-                },
-                {
-                    text:'simple ways to have a pretty face',
-                    img:'../src/assets/images/blog-55-big.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
-                    author: {
-                        name:'john doe',
-                        href:'#'
-                    },
-                    cat:{
-                        badge:'photography, travel',
-                        href:'#'
-                    },
-                    comments:{
-                        number:'12 comments',
-                        href:'#'
-                    },
-                    date:{
-                        day:12,
-                        month: 'jan'
-                    }
-                },
-                {
-                    text:'ranking the greatest player in basketball',
-                    img:'../src/assets/images/blog-56-big.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
-                    author: {
-                        name:'john doe',
-                        href:'#'
-                    },
-                    cat:{
-                        badge:'sport, business',
-                        href:'#'
-                    },
-                    comments:{
-                        number:'12 comments',
-                        href:'#'
-                    },
-                    date:{
-                        day:12,
-                        month: 'jan'
-                    }
-                },
-                {
-                    text:'top camper trailer towing tips',
-                    img:'../src/assets/images/blog-58-big.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
-                    author: {
-                        name:'john doe',
-                        href:'#'
-                    },
-                    cat:{
-                        badge:'travel, lifestyle',
-                        href:'#'
-                    },
-                    comments:{
-                        number:'12 comments',
-                        href:'#'
-                    },
-                    date:{
-                        day:12,
-                        month: 'jan'
-                    }
-                },
-                {
-                    text:'10 best travel tips after 5 years traveling the word',
-                    img:'../src/assets/images/blog-58-big.jpg',
-                    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
-                    author: {
-                        name:'john doe',
-                        href:'#'
-                    },
-                    cat:{
-                        badge:'travel, lifestyle',
-                        href:'#'
-                    },
-                    comments:{
-                        number:'12 comments',
-                        href:'#'
-                    },
-                    date:{
-                        day:12,
-                        month: 'jan'
-                    }
-                }
-            ]
+            store
         }
     }
 }
@@ -126,23 +21,27 @@ export default {
 
     <div class="custom-card ">
 
-        <div v-for="item in items" :key="item" class="box">
+        <div v-for="mainPost in store.mainPosts" :key="mainPost" class="box">
 
-            <img :src="item.img" :alt="item.img">
+            <img v-if="mainPost.img.length == 1" :src="mainPost.img" :alt="mainPost.img">
+
+            <div v-else class="collage-img">
+                <Collage :type="mainPost.img"/>
+            </div>
 
             <div class="text-wrapper d-flex">
 
                 <div class="calendar d-flex flex-column">
-                    <span>{{item.date.day}}</span>
-                    <span>{{item.date.month}}</span>
+                    <span>{{mainPost.date.day}}</span>
+                    <span>{{mainPost.date.month}}</span>
                 </div>
 
                 <div class="text ">
 
-                    <h3>{{item.text}}</h3>
+                    <h3>{{mainPost.text}}</h3>
 
                     <div class="description">
-                        <p>{{item.description}}</p>
+                        <p>{{mainPost.description}}</p>
                     </div>
 
                     <div class="info d-flex justify-content-between">
@@ -151,17 +50,17 @@ export default {
 
                             <div class="author">
                                 <i class="fa-regular fa-user"></i>
-                                <span>By <a :href="item.author.href">{{item.author.name}}</a></span>
+                                <span>By <a :href="mainPost.author.href">{{mainPost.author.name}}</a></span>
                             </div>
 
                             <div class="category">
                                 <i class="fa-regular fa-folder"></i>
-                                <a :href="item.cat.href">{{item.cat.badge}}</a>
+                                <a :href="mainPost.cat.href">{{mainPost.cat.badge}}</a>
                             </div>
 
                             <div class="comments">
                                 <i class="fa-regular fa-comments"></i>
-                                <a :href="item.comments.href">{{item.comments.number}}</a>
+                                <a :href="mainPost.comments.href">{{mainPost.comments.number}}</a>
                             </div>
 
                         </div>
