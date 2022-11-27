@@ -26,7 +26,7 @@ export default {
             <img v-if="mainPost.img.length == 1" :src="mainPost.img" :alt="mainPost.img">
 
             <div v-else class="collage-img">
-                <Collage :type="mainPost.img"/>
+                <Collage :typeMain="mainPost.img"/>
             </div>
 
             <div class="text-wrapper d-flex">

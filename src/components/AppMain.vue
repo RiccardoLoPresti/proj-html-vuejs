@@ -1,36 +1,42 @@
 <script>
 
 import PostCards from './PostCards.vue';
+import Collage from './Collage.vue';
 import Pagination from './Pagination.vue';
+
+import {store} from '../data/store.js'
+
 
 export default {
     name:'AppMain',
     components:{
         PostCards,
+        Collage,
         Pagination
     },
     data(){
         return{
+            store,
             tags:[
                 {
                     cat:'design',
-                    ulr:'#'
+                    url:'#'
                 },
                 {
                     cat:'brands',
-                    ulr:'#'
+                    url:'#'
                 },
                 {
                     cat:'video',
-                    ulr:'#'
+                    url:'#'
                 },
                 {
                     cat:'business',
-                    ulr:'#'
+                    url:'#'
                 },
                 {
                     cat:'travel',
-                    ulr:'#'
+                    url:'#'
                 },
             ]
         }
@@ -85,14 +91,19 @@ export default {
 
                     <div class="instagram">
                         <h3>latest from instagram</h3>
+                        <div  v-for="el in store.insta" :key="el" class="box-insta">
+                            
+                            <Collage :typeInsta="el.img"/>
+                            
+                        </div>
 
-                        <!--CONTENUTO QUI-->
+
                     </div>
 
                     <div class="tags">
                         <h3>tags</h3>
                         <div v-for="tag in tags" :key="tag" class="pills">
-                            <a :href="tag.ulr">{{tag.cat}}</a>
+                            <a :href="tag.url">{{tag.cat}}</a>
                         </div>
                     </div>
 
