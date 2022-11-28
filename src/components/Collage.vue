@@ -29,7 +29,6 @@ export default {
     margin-bottom: 20px;
     width: 100%;
     height: 100%;
-    //background-color: rgba(155, 3, 137, 0.132);
     .img{
         width: calc(100% / 3);
     }

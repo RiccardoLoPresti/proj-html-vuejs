@@ -1,43 +1,23 @@
 <script>
+
+import SliderComp from './SliderComp.vue';
+
 export default {
     name:'AppSliderBadge',
-    data(){
-      return{
-        items:[
-                {
-                  cat:'gadgets',
-                  href: 'www.google.com'
-                },
-                {
-                  cat:'photography',
-                  href: '#'
-                },
-                {
-                  cat:'lifestyle',
-                  href: '#'
-                },
-                {
-                  cat:'fashion',
-                  href: '#'
-                },
-                {
-                  cat:'recipes',
-                  href: '#'
-                },
-                {
-                  cat:'travel',
-                  href: '#'
-                },
-              ]
-      }
-    }
+    components:{
+      SliderComp
+    },
 }
 </script>
 
 <template>
-
+  
   <section>
-    <div class="slider">
+    <SliderComp/>
+
+
+
+    <!--<div class="slider">
       <div class="container h-100 d-flex justify-content-center ">
         <div class="row h-100 d-flex align-items-center">
 
@@ -59,7 +39,7 @@ export default {
 
         </div>
       </div>
-    </div>
+    </div>-->
   </section>
 
 </template>

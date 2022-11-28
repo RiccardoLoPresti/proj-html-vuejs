@@ -96,7 +96,7 @@ export default {
                             
                             <div class="wrapper d-flex">
 
-                                <img src="../assets/images/our-office-4-square.jpg" alt="office">
+                                <img src="../assets/images/our-office-5-square.jpg" alt="office">
 
                                 <div class="text">
                                     <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cupiditate quibusdam </p>
