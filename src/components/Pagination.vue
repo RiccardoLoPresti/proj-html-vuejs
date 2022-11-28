@@ -19,6 +19,7 @@ export default {
         changePage(page){
             if (page < 1) page = 1;
             if (page > this.numPages()) page = this.numPages();
+            this.currentPage = page
         },
         prevPage(){
             if(this.currentPage > 1){
@@ -35,15 +36,14 @@ export default {
             }
         },
         pagination(array){
-            const page1 = array.slice(0,5)
-            const page2 = array.slice(5,10)
-            const page3 = array.slice(10,15)
-            const page4 = array.slice(15,20)
-            console.log(array);
-            console.log(page1);
-            console.log(page2);
-            console.log(page3);
-            console.log(page4);
+            store.page1 = array.slice(0,5);
+            store.page2 = array.slice(5,10);
+            store.page3 = array.slice(10,15);
+            store.page4 = array.slice(15,20);
+        },
+        getEmit(number){
+            console.log('getEmit:',number);
+            let emitOutput = this.$emit('changePage',number)
         }
     },
     mounted(){
@@ -60,12 +60,13 @@ export default {
 
             <span
              v-for="page,index in numPages()" :key="index" 
+             @click="changePage(page)"
              :class="{'active': this.currentPage == page}"
             >
                 {{page}}
             </span>
 
-            <span v-if="this.currentPage < numPages()" @click="nextPage()"><i class="fa-solid fa-chevron-right"></i></span>
+            <span v-if="this.currentPage < numPages()" @click="nextPage(), getEmit(this.currentPage)" ><i class="fa-solid fa-chevron-right"></i></span>
         </div>
     </div>
 </template>

@@ -7,6 +7,9 @@ import {store} from '../data/store.js'
 
 export default {
     name:'CardsText',
+    props:{
+        type: String
+    },
     components:{
         Collage
     },
@@ -23,7 +26,7 @@ export default {
     <div class="custom-card ">
 
         <!--STAMPO TUTTI I POST PRESI DA STORE.MAINPOSTS-->
-        <div v-for="mainPost in store.mainPosts" :key="mainPost" class="box">
+        <div v-for="mainPost in store.page1" :key="mainPost" class="box">
 
             <!--SE LA LUNGHEZZA DELL'ARRAY DELLE IMG è UGUALE A 1 STAMPO IMMAGINE SINGOLA-->
             <img v-if="mainPost.img.length == 1" :src="mainPost.img" :alt="mainPost.img">

@@ -161,16 +161,17 @@ export const store = reactive({
                 month: 'jan'
             }
         },
+        //--------------------------------2
         {
-            text:'how to make friends as a grown-up',
-            img:['../src/assets/images/blog-54.jpg'],
+            text:'simple ways to have a pretty face',
+            img:['../src/assets/images/blog-55-big.jpg'],
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
             author: {
                 name:'john doe',
                 href:'#'
             },
             cat:{
-                badge:'lifestyle, travel',
+                badge:'photography, travel',
                 href:'#'
             },
             comments:{
@@ -183,15 +184,15 @@ export const store = reactive({
             }
         },
         {
-            text:'simple ways to have a pretty face',
-            img:['../src/assets/images/blog-55-big.jpg'],
+            text:'how to make friends as a grown-up',
+            img:['../src/assets/images/blog-54.jpg'],
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
             author: {
                 name:'john doe',
                 href:'#'
             },
             cat:{
-                badge:'photography, travel',
+                badge:'lifestyle, travel',
                 href:'#'
             },
             comments:{
@@ -499,6 +500,10 @@ export const store = reactive({
         }
     ],
     // /MAINPOSTS
+    page1:'',
+    page2:'',
+    page3:'',
+    page4:'',
     insta:[
         {
             img:[

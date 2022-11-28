@@ -50,6 +50,12 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        nextPage(pageNum){
+            return 'page' + pageNum
+            //console.log('----------------------',prova);
+        }
     }
 }
 </script>
@@ -64,10 +70,10 @@ export default {
                 <div class="col-xxl-9">
 
                     <!--POSTCARDS-->
-                    <PostCards/>
+                    <PostCards :type="nextPage()"/>
 
                     <!--PAGINAZIONE-->
-                    <Pagination/>
+                    <Pagination @changePage="(pageNum) => nextPage(pageNum)" />
                     
                 </div>
                 <!--/MAIN POSTS-->
