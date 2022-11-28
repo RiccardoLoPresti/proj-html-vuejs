@@ -1,16 +1,12 @@
 <script>
 
+import {store} from '../data/store.js'
+
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
+import { Navigation } from "swiper";
 import "swiper/css";
-
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-
-// import required modules
-import { Navigation } from "swiper";
 
 export default {
     name:'SliderComp',
@@ -25,32 +21,7 @@ export default {
   },
   data(){
       return{
-        items:[
-                {
-                  cat:'gadgets',
-                  href: '#'
-                },
-                {
-                  cat:'photography',
-                  href: '#'
-                },
-                {
-                  cat:'lifestyle',
-                  href: '#'
-                },
-                {
-                  cat:'fashion',
-                  href: '#'
-                },
-                {
-                  cat:'recipes',
-                  href: '#'
-                },
-                {
-                  cat:'travel',
-                  href: '#'
-                },
-              ]
+        store
       }
     },
 }
@@ -58,34 +29,63 @@ export default {
 </script>
 
 <template>
-<swiper
-    :slidesPerView="3"
-    :spaceBetween="0"
+  <div class="wrapper">
+    <swiper
+    :slidesPerView="5"
+    :spaceBetween="10"
     :slidesPerGroup="5"
-    :loop="true"
+    :loop="false"
+    :loopFillGroupWithBlank="true"
+    :pagination="{
+      clickable: true,
+    }"
     :navigation="true"
     :modules="modules"
     class="mySwiper"
-  >
-    <swiper-slide v-for="item in items" :key="item">{{item.cat}}</swiper-slide>
+    >
+    <swiper-slide v-for="item in store.categories" :key="item">
+      <div class="badge">
+        <a :href="item.url">{{item.name}}</a>
+      </div>
+    </swiper-slide>
   </swiper>
+  </div>
+
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/vars' as *;
 @use '../styles/partials/mixin' as *;
 
+.wrapper{
+  background-color: $bg-main-color;
+}
 
 .swiper {
   width: 1420px;
   height: 150px;
 }
 
-.swiper-slide {
-  margin-top: 59px;
+.swiper-slide{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px
+}
+
+.swiper-slide .badge {
+  @include badge('big');
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  font-size: .8rem;
+}
+
+.badge:hover{
+  background-color: lighten($bg-very-dark-grey-color, 10%);
+}
+
+a,a:hover{
+  color: $white-color;
 }
 
 </style>

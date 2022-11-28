@@ -1,62 +1,12 @@
 <script>
+
+import {store} from '../data/store.js'
+
 export default {
     name:'AppFooter',
     data(){
         return{
-            categories:[
-                {
-                    name:'gadgets',
-                    url:'#'
-                },
-                {
-                    name:'photography',
-                    url:'#'
-                },
-                {
-                    name:'lifestyle',
-                    url:'#'
-                },
-                {
-                    name:'fashion',
-                    url:'#'
-                },
-                {
-                    name:'recipes',
-                    url:'#'
-                },
-                {
-                    name:'travel',
-                    url:'#'
-                },
-                {
-                    name:'business',
-                    url:'#'
-                },
-                {
-                    name:'architecture',
-                    url:'#'
-                },
-                {
-                    name:'reviews',
-                    url:'#'
-                },
-                {
-                    name:'sports',
-                    url:'#'
-                },
-                {
-                    name:'videos',
-                    url:'#'
-                },
-                {
-                    name:'techonology',
-                    url:'#'
-                },
-                {
-                    name:'design',
-                    url:'#'
-                },
-            ]
+            store
         }
     }
 }
@@ -129,7 +79,7 @@ export default {
                     <div class="col-xxl-2 col-md-6">
                         <div class="about">
                             <h3>categories</h3>
-                            <div v-for="category in categories" :key="category" class="cat">
+                            <div v-for="category in store.categories" :key="category" class="cat">
                                 <a :href="category.url">{{category.name}}</a>
                             </div>
                         </div>

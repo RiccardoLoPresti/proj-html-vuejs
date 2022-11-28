@@ -13,33 +13,9 @@ export default {
 <template>
   
   <section>
+
     <SliderComp/>
-
-
-
-    <!--<div class="slider">
-      <div class="container h-100 d-flex justify-content-center ">
-        <div class="row h-100 d-flex align-items-center">
-
-          <div class="col">
-
-            <div class="box-badge d-flex flex-wrap justify-content-center">
-              <div v-for="item in items" :key="item" class="badge">{{item.cat}}</div>
-            </div>
-
-            <div class="prev">
-              <i class="fa-solid fa-chevron-left"></i>
-            </div>
-
-            <div class="next">
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>-->
+    
   </section>
 
 </template>

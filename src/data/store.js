@@ -172,5 +172,59 @@ export const store = reactive({
                 '../src/assets/images/29415304_166583630713703_1032667922171953152_n.jpg',
             ]
         }
+    ],
+    categories:[
+        {
+            name:'gadgets',
+            url:'#'
+        },
+        {
+            name:'photography',
+            url:'#'
+        },
+        {
+            name:'lifestyle',
+            url:'#'
+        },
+        {
+            name:'fashion',
+            url:'#'
+        },
+        {
+            name:'recipes',
+            url:'#'
+        },
+        {
+            name:'travel',
+            url:'#'
+        },
+        {
+            name:'business',
+            url:'#'
+        },
+        {
+            name:'architecture',
+            url:'#'
+        },
+        {
+            name:'reviews',
+            url:'#'
+        },
+        {
+            name:'sports',
+            url:'#'
+        },
+        {
+            name:'videos',
+            url:'#'
+        },
+        {
+            name:'techonology',
+            url:'#'
+        },
+        {
+            name:'design',
+            url:'#'
+        },
     ]
 })
