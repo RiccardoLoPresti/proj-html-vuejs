@@ -238,14 +238,16 @@ footer{
         @include badge('');
         background-color: $black-color;
         margin: 5px 5px;
+        &:hover{
+                background-color: lighten($black-color, 10%);
+            }
         a{
             display: inline-block;
             color:$white-color;
-            
         }
     }
 }
-
+//BOTTOM FOOTER
 .bottom-footer{
     background-color: $bg-dark-carbon-color;
     color: $text-5555-dark-grey-color;
