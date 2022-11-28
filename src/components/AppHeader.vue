@@ -3,6 +3,7 @@ export default {
     name:'AppHeader',
     data(){
         return{
+            isShow: false,
             slogan: 'Everything about Lifestyle, Travel and Gadgets!',
             secondaryNav:[
                 {
@@ -60,6 +61,14 @@ export default {
                 }
             ],
         }
+    },
+    methods:{
+        getActive(index){
+            this.mainNav.forEach(element => {
+                element.current = false
+            });
+            this.mainNav[index].current = true
+        }
     }
 }
 </script>
@@ -85,11 +94,14 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <!--/SECONDARY NAV-->
 
             </div>
         </div>
     </div>
     <!--/SIGN-IN BAR-->
+
+    <!--LOGO-->
     <div class="logo-wrapper">
         <div class="container h-100">
             <div class="row h-100">
@@ -101,32 +113,36 @@ export default {
             </div>
         </div>
     </div>
+    <!--/LOGO-->
 
+    <!--MAIN NAV-->
     <nav>
         <div class="container h-100">
             <div class="row h-100 d-flex justify-content-between">
 
                 <div class="col-10 nav h-100">
                     <ul class="d-flex flex-wrap h-100 d-flex align-items-center">
-                        <li v-for="mainNavItem in mainNav" :key="mainNavItem">
-                            <a :class="{'active': mainNavItem.current}" :href="mainNavItem.url">{{mainNavItem.name}}</a>
+                        <li v-for="mainNavItem,index in mainNav" :key="index">
+                            <a @click="getActive(index)" :class="{'active': mainNavItem.current}" :href="mainNavItem.url">{{mainNavItem.name}}</a>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="col-2 glass h-100 d-flex align-items-center justify-content-end">
-                    <input type="text">
-                    <i class="fa-solid fa-magnifying-glass m-0"></i>
+                <div class="col-2 glass h-100 d-flex flex-column align-items-end justify-content-center">
+                    <i @click="isShow = !isShow" class="fa-solid fa-magnifying-glass m-0"></i>
+                    <input v-show="isShow" type="text" placeholder="Search">
                 </div>
             </div>
         </div>
     </nav>
+    <!--/MAIN NAV-->
 
   </header>
 
 </template>
 
 <style lang="scss" scoped>
+
 @use '../styles/partials/vars' as *;
 
 a{
@@ -190,15 +206,23 @@ nav{
         }
     }
     .glass{
+        position: relative;
         input{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
             min-width: 70px;
-            border: none;
-            border-right: 2px solid $border-eeee-color;
+            height: 43px;
             margin-right: 20px;
-            height: 13px;
         }
         i{
             font-size: .8rem;
+            padding-left: 16px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-left:1px solid $border-eeee-color;
+            cursor: pointer;
         }
     }
 }
