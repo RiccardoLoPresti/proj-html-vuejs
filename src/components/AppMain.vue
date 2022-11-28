@@ -38,6 +38,16 @@ export default {
                     cat:'travel',
                     url:'#'
                 },
+            ],
+            twitterPosts:[
+                {
+                    text:'Lorem ipsum dolor sit amet dsadasdas consectetur.',
+                    data:'01:05 PM Sep 18th',
+                },
+                {
+                    text:'Lorem ipsum aiai dolor sit amet dsadasdas consectetur.',
+                    data:'01:04 PM Sep 18th',
+                }
             ]
         }
     }
@@ -50,67 +60,74 @@ export default {
         <div class="container h-100">
             <div class="row h-100">
 
+                <!--MAIN POSTS-->
                 <div class="col-xxl-9">
 
+                    <!--POSTCARDS-->
                     <PostCards/>
+
+                    <!--PAGINAZIONE-->
                     <Pagination/>
                     
                 </div>
+                <!--/MAIN POSTS-->
 
+                <!--ASIDE POSTS-->
                 <div class="col-xxl-3">
-
+                    
+                    <!--TWITTER POSTS-->
                     <div class="twitter">
+
                         <h3>latest from twitter</h3>
 
-                        <div class="latest d-flex">
+                        <div v-for="twitterPost in twitterPosts" :key="twitterPost" class="latest d-flex">
 
                             <i class="fa-brands fa-twitter"></i>
 
                             <div class="text">
-                                <p class="m-0">Lorem ipsum dolor sit amet dsadasdas consectetur.</p>
+                                <p class="m-0">{{twitterPost.text}}</p>
                                 <div class="data">
-                                    <p>data</p>
+                                    <p>{{twitterPost.data}}</p>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="latest d-flex">
-
-                            <i class="fa-brands fa-twitter"></i>
-
-                            <div class="text">
-                                <p class="m-0">Lorem ipsum dolor sit amet dsadasdas consectetur.</p>
-                                <div class="data">
-                                    <p>data</p>
-                                </div>
-                            </div>
-
-                        </div>
-
+                       
                     </div>
+                    <!--/TWITTER POSTS-->
 
+                    <!--INSTAGRAM POSTS-->
                     <div class="instagram">
-                        <h3>latest from instagram</h3>
-                        <div  v-for="el in store.insta" :key="el" class="box-insta">
-                            
-                            <Collage :typeInsta="el.img"/>
-                            
-                        </div>
 
+                        <a href="#">
+                            <h3>latest from instagram</h3>
+
+                            <div  v-for="el in store.insta" :key="el" class="box-insta">
+
+                                <!--PASSO COME PROPS AL COLLAGE GLI ELEMENTI INSTA-->
+                                <Collage :typeInsta="el.img"/>
+
+                            </div>
+                        </a>
 
                     </div>
+                    <!--/INSTAGRAM POSTS-->
 
+                    <!--TAGS-->
                     <div class="tags">
                         <h3>tags</h3>
                         <div v-for="tag in tags" :key="tag" class="pills">
                             <a :href="tag.url">{{tag.cat}}</a>
                         </div>
                     </div>
+                    <!--/TAGS-->
 
+                    <!--FACEBOOK POST-->
                     <div class="facebook pb-5">
                         <h3>find us on facebook</h3>
                         <a href="#">Okler Themes</a>
                     </div>
+                    <!--/FACEBOOK POST-->
 
                 </div>
 
@@ -151,6 +168,7 @@ export default {
     }
     .instagram{
         padding-top: 30px;
+        cursor: pointer;
     }
     .tags{
         padding-bottom: 100px;
