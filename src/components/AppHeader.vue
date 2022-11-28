@@ -63,10 +63,13 @@ export default {
         }
     },
     methods:{
+        //funzione per rendere active l'elemento cliccato
         getActive(index){
+            //ciclo per togliere tutti gli active
             this.mainNav.forEach(element => {
                 element.current = false
             });
+            //indico quale deve essere active passando indice
             this.mainNav[index].current = true
         }
     }
