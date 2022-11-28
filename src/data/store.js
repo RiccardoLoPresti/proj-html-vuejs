@@ -47,7 +47,344 @@ export const store = reactive({
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?'
         },
     ],
+    //MAINPOSTS
     mainPosts:[
+        {
+            text:'how to make friends as a grown-up',
+            img:['../src/assets/images/blog-54.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'lifestyle, travel',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'simple ways to have a pretty face',
+            img:['../src/assets/images/blog-55-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'photography, travel',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'ranking the greatest player in basketball',
+            img:['../src/assets/images/blog-56-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'sport, business',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'top camper trailer towing tips',
+            img:['../src/assets/images/blog-58-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'travel, lifestyle',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'10 best travel tips after 5 years traveling the word',
+            img:[
+                '../src/assets/images/blog-13.jpg',
+                '../src/assets/images/blog-16.jpg',
+                '../src/assets/images/blog-20.jpg',
+                '../src/assets/images/blog-23.jpg',
+                '../src/assets/images/blog-29.jpg',
+                '../src/assets/images/blog-40.jpg',
+            ],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'travel, lifestyle',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:8,
+                month: 'jan'
+            }
+        },
+        {
+            text:'how to make friends as a grown-up',
+            img:['../src/assets/images/blog-54.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'lifestyle, travel',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'simple ways to have a pretty face',
+            img:['../src/assets/images/blog-55-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'photography, travel',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'ranking the greatest player in basketball',
+            img:['../src/assets/images/blog-56-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'sport, business',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'top camper trailer towing tips',
+            img:['../src/assets/images/blog-58-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'travel, lifestyle',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'10 best travel tips after 5 years traveling the word',
+            img:[
+                '../src/assets/images/blog-13.jpg',
+                '../src/assets/images/blog-16.jpg',
+                '../src/assets/images/blog-20.jpg',
+                '../src/assets/images/blog-23.jpg',
+                '../src/assets/images/blog-29.jpg',
+                '../src/assets/images/blog-40.jpg',
+            ],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'travel, lifestyle',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:8,
+                month: 'jan'
+            }
+        },
+        {
+            text:'how to make friends as a grown-up',
+            img:['../src/assets/images/blog-54.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'lifestyle, travel',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'simple ways to have a pretty face',
+            img:['../src/assets/images/blog-55-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'photography, travel',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'ranking the greatest player in basketball',
+            img:['../src/assets/images/blog-56-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'sport, business',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'top camper trailer towing tips',
+            img:['../src/assets/images/blog-58-big.jpg'],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'travel, lifestyle',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:12,
+                month: 'jan'
+            }
+        },
+        {
+            text:'10 best travel tips after 5 years traveling the word',
+            img:[
+                '../src/assets/images/blog-13.jpg',
+                '../src/assets/images/blog-16.jpg',
+                '../src/assets/images/blog-20.jpg',
+                '../src/assets/images/blog-23.jpg',
+                '../src/assets/images/blog-29.jpg',
+                '../src/assets/images/blog-40.jpg',
+            ],
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore provident velit blanditiis exercitationem nisi fugit! Rem eaque atque numquam minima ut adipisci tempore debitis vero non, obcaecati nobis odit?',
+            author: {
+                name:'john doe',
+                href:'#'
+            },
+            cat:{
+                badge:'travel, lifestyle',
+                href:'#'
+            },
+            comments:{
+                number:'12 comments',
+                href:'#'
+            },
+            date:{
+                day:8,
+                month: 'jan'
+            }
+        },
         {
             text:'how to make friends as a grown-up',
             img:['../src/assets/images/blog-54.jpg'],
@@ -161,6 +498,7 @@ export const store = reactive({
             }
         }
     ],
+    // /MAINPOSTS
     insta:[
         {
             img:[
