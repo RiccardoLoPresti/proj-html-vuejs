@@ -13,15 +13,24 @@ export default {
 <template>
   
   <section>
+
     <div class="jumbo">
+
         <div class="container">
             <div class="row">
+
                 <div class="col-auto wrapper w-100 d-flex justify-content-center flex-wrap">
+                    
+                    <!--PASSO COME TYPE PROPS JUMBO A CARDTEXT-->
                     <CardText type="jumbo"/>
+
                 </div>
+
             </div>
         </div>
+
     </div>
+
   </section>
 
 </template>

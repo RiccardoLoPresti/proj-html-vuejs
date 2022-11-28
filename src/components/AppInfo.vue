@@ -62,6 +62,13 @@ export default {
                     text:'how to take better concert pictures in 30 seconds',
                     data:'january, 12, 2022'
                 },
+            ],
+            authors:[
+                {
+                    name:'jhon doe',
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum ad provident neque beatae quia animi possimus, minima illo!',
+                    avatar:'../src/assets/images/avatar.jpg'
+                }
             ]
         }
     }
@@ -75,8 +82,9 @@ export default {
 
         <div class="row h-100">
 
+            <!--POPULAR POST-->
             <div class="col-xxl-4 col-lg-6">
-
+                
                 <div class="post-wrapper ">
 
                     <h3 class="m-0">Popular posts</h3>
@@ -94,7 +102,9 @@ export default {
                 </div>
 
             </div>
+            <!--/POPULAR POST-->
 
+            <!--RECENT POST-->
             <div class="col-xxl-4 col-lg-6">
 
                 <div class="post-wrapper ">
@@ -114,13 +124,16 @@ export default {
                 </div>
 
             </div>
+            <!--/RECENT POST-->
 
+            <!--FEATURED POST-->
             <div class="col-xxl-4 col-lg-6">
 
                 <h3 class="m-0">featured posts</h3>
 
                 <div class="box-card">
 
+                    <!--PASSO COME TYPE PROPS INFO A CARDTEXT-->
                     <CardsText type="info"/>
 
                 </div>
@@ -129,16 +142,16 @@ export default {
 
                     <h3 class="mb-1">featured Author</h3>
 
-                    <div class="posts d-flex">
+                    <div v-for="author in authors" :key="author" class="posts d-flex">
 
                         <div class="box-img d-flex align-items-center">
-                            <img id="avatar" src="../assets/images/avatar.jpg" alt="avatar.jpg">
+                            <img id="avatar" :src="author.avatar" :alt="author.name">
                         </div>
 
-                        <div class="text">
-                            <h6 id="author">jhon doe</h6>
+                        <div  class="text">
+                            <h6 id="author">{{author.name}}</h6>
                             <span>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum ad provident neque beatae quia animi possimus, minima illo!
+                                {{author.text}}
                             </span>
                         </div>
 
@@ -147,6 +160,8 @@ export default {
                 </div>
 
             </div>
+            <!--/FEATURED POST-->
+
         </div>
 
     </div>
@@ -179,7 +194,7 @@ export default {
             .text{
                 max-width: 335px;
                 padding: 10px 10px;
-                h6, span{
+                h6, span, #author{
                     text-transform: capitalize;
                 }
                 h6{
@@ -195,7 +210,6 @@ export default {
                 height: 110px;
             }
             #author{
-                text-transform: capitalize;
                 font-size: 1rem;
                 padding-bottom: 5px;
                 font-weight: 700;
