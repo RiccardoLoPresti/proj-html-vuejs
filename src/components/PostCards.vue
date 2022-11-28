@@ -1,5 +1,6 @@
 <script>
 
+//IMPORTO COLLAGE
 import Collage from './Collage.vue';
 import {store} from '../data/store.js'
 
@@ -21,21 +22,26 @@ export default {
 
     <div class="custom-card ">
 
+        <!--STAMPO TUTTI I POST PRESI DA STORE.MAINPOSTS-->
         <div v-for="mainPost in store.mainPosts" :key="mainPost" class="box">
 
+            <!--SE LA LUNGHEZZA DELL'ARRAY DELLE IMG è UGUALE A 1 STAMPO IMMAGINE SINGOLA-->
             <img v-if="mainPost.img.length == 1" :src="mainPost.img" :alt="mainPost.img">
 
+            <!--SE NO STAMPO IL COLLAGE DI IMMAGINI PASSANDO LE IMG COME PROPS-->
             <div v-else class="collage-img">
                 <Collage :typeMain="mainPost.img"/>
             </div>
 
             <div class="text-wrapper d-flex">
 
+                <!--CALENDAR-->
                 <div class="calendar d-flex flex-column">
                     <span>{{mainPost.date.day}}</span>
                     <span>{{mainPost.date.month}}</span>
                 </div>
 
+                <!--TEXT OF POSTS-->
                 <div class="text ">
 
                     <h3>{{mainPost.text}}</h3>
@@ -44,7 +50,8 @@ export default {
                         <p>{{mainPost.description}}</p>
                     </div>
 
-                    <div class="info d-flex justify-content-between">
+                    <!--INFO-->
+                    <div class="info d-flex justify-content-between flex-wrap">
 
                         <div class="wrapper d-flex">
 
@@ -65,7 +72,7 @@ export default {
 
                         </div>
 
-                        <div class="read-more">
+                        <div class="read-more d-flex">
                             <a href="#">Read More</a>
                         </div>
                         
@@ -156,21 +163,25 @@ export default {
                     }
                     a{
                         color:$text-main-color;
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
                     a:first-child{
                         padding: 0;
                     }
                 }
                 .read-more{
-                    text-transform: uppercase;
-                    border: 1px solid $border-bfbf-color;
-                    border-radius: 5px;
-                    font-size: .6rem;
-                    text-align: center;
-                    padding: 4px 10px;
+                    
                     a{
                         color:  $text-dark-grey-color;
                         display: inline-block;
+                        text-transform: uppercase;
+                        border: 1px solid $border-bfbf-color;
+                        border-radius: 5px;
+                        font-size: .6rem;
+                        text-align: center;
+                        padding: 4px 10px;
                     }
                 }
                 

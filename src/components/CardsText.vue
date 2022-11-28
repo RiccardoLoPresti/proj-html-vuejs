@@ -16,6 +16,8 @@ export default {
 </script>
 
 <template>
+
+    <!--STAMPO GLI ITEM IN BASE AL TYPE PASSATO TRAMITE PROPS-->
     <div v-for="item in store[type]" :key="item" class="custom-card ">
         <div class="box">
             
@@ -32,6 +34,7 @@ export default {
             </div>
         </div>
     </div>
+    
 </template>
 
 <style lang="scss" scoped>
