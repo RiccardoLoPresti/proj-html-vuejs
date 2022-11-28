@@ -65,7 +65,14 @@ export default {
 <template>
 
     <footer>
+
+        <div class="banner">
+            <p>get in touch</p>
+        </div>
+        <div class="shadow"></div>
+
         <div class="top-footer">
+
             <div class="container">
 
                 <div class="row">
@@ -133,6 +140,7 @@ export default {
         </div>
 
         <div class="bottom-footer">
+
             <div class="container h-100">
 
                 <div class="row h-100">
@@ -187,6 +195,35 @@ export default {
 @use '../styles/partials/vars' as *;
 @use '../styles/partials/mixin' as *;
 
+footer{
+    position: relative;
+    z-index: 99;
+}
+    .banner{
+        z-index:1;
+        text-align: center;
+        line-height: 45px;
+        color: $white-color;
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        font-family:$secondary-font;
+        position: absolute;
+        top: -15px;
+        right: calc(100% - 397px);
+        width: 145px;
+        height: 45px;
+        background-color:$bg-main-color;
+    }
+    .shadow{
+        z-index:-1;
+        position: absolute;
+        top: 17px;
+        right: calc(100% - 377px);
+        transform: rotate(28deg);
+        width: 145px;
+        height: 45px;
+        background-color:darken($bg-main-color, 20%);
+    }
 .top-footer{
     background-color: $bg-very-dark-grey-color;
     padding-top: 80px ;
